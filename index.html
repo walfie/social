@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <meta charset="UTF-8">
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-}
-a { text-decoration: none; color: inherit; }
-#brands {
-  margin: auto;
-  height: 100%;
-  width: 12em;
-  font-size: 2em;
-  background: #000;
-  color: #fff;
-  padding: 5px;
-}
-.fa-twitter { color: #55acee }
-.fa-tumblr { color: #35465c }
-.fa-instagram { color: #517fa4 }
-.fa-vine { color: #00bf8f }
-.fa-lastfm { color: #db1302 }
-.fa-soundcloud { color: #ff7000 }
-#brands span { padding-left: 10px; }
-#brands ul { list-style: none; padding: 0; margin: 0.5em; }
-#brands li { padding: 0.4em; }
-#image {
-  left: 8em;
-  width: 100%;
-  height: 100%;
-  background: url("https://pbs.twimg.com/profile_images/567185583240253440/LiL-3sPW.png");
-  background-size: cover;
-  background-position: top center;
-}
-</style>
+<meta name=viewport content="width=device-width, initial-scale=1">
 <title>Walfie</title>
+<style>
+html, body, .content {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-item {
+  flex: 1 1 33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-full-row {
+  flex: 1 1 100%;
+}
+
+.content {
+  font: 1.5em Helvetica;
+  color: #fff;
+}
+.content a { text-decoration: none; color: inherit; }
+
+@media (orientation:portrait) {
+  .flex-container { flex-direction: column; }
+  .flex-item { flex: 1; }
+}
+
+.bg { transition: background-color 0.3s ease; }
+.bg:hover { background-color: #000; }
+
+.bg-twitter { background-color: #55acee; }
+.bg-tumblr { background-color: #35465c; }
+.bg-instagram { background-color: #517fa4; }
+.bg-vine { background-color: #00bf8f; }
+.bg-lastfm { background-color: #db1302; }
+.bg-soundcloud { background-color: #ff7000; }
+.bg-stack-overflow { background-color: #f90; }
+.bg-black { background-color: #000; }
+</style>
 </head>
+
 <body>
-<div id="brands">
-<ul>
-<li>
-  <i class="fa fa-fw fa-twitter"></i>
-  <span>
-    <a href="http://twitter.com/walfieee">walfieee</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-tumblr"></i>
-  <span>
-    <a href="http://walfie.tumblr.com">walfie</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-tumblr"></i>
-  <span>
-    <a href="http://walf-draw.tumblr.com">walf-draw</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-instagram"></i>
-  <span>
-    <a href="http://instagram.com/walfieee">walfieee</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-vine"></i>
-  <span>
-    <a href="http://vine.co/walfie">walfie</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-lastfm"></i>
-  <span>
-    <a href="http://last.fm/user/walfieee">walfieee</a>
-  </span>
-</li>
-<li>
-  <i class="fa fa-fw fa-soundcloud"></i>
-  <span>
-    <a href="http://soundcloud.com/walfs/likes">walfs</a>
-  </span>
-</li>
-</ul>
+<div class="content flex-container">
+  <div class="flex-full-row flex-item">
+    <div class="flex-item"></div>
+    <div>Walfie</div>
+    <div class="flex-item"></div>
+  </div>
+  <!-- good ol' flexbox hacks -->
+  <a class="flex-item bg bg-tumblr" target="_blank" href="http://walf-draw.tumblr.com/">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-tumblr"></i>
+      <span>Tumblr</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-instagram" target="_blank" href="http://instagram.com/walfieee">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-instagram"></i>
+      <span>Instagram</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-twitter" target="_blank" href="http://twitter.com/walfieee">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-twitter"></i>
+      <span>Twitter</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-vine" target="_blank" href="http://vine.co/walfie">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-vine"></i>
+      <span>Vine</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-stack-overflow" target="_blank" href="http://stackoverflow.com/users/1887090/walfie">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-stack-overflow"></i>
+      <span>Stack Overflow</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-lastfm" target="_blank" href="http://last.fm/user/walfieee">
+    <div class="flex-item"></div>
+    <div class="social">
+      <i class="fa fa-fw fa-lastfm"></i>
+      <span>Lastfm</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <div class="flex-full-row flex-item"></div>
 </div>
-<div id="image"></div>
-
-<!-- statcounter -->
-<script>
-  var sc_project=9782504, sc_invisible=1, sc_security="94586ca4"; 
-</script>
-<script src="http://statcounter.com/counter/counter.js"></script>
-<noscript>
-  <img src="http://c.statcounter.com/9782504/0/94586ca4/1/" style="display:none;">
-</noscript>
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </body>
 </html>
-
