@@ -10,7 +10,7 @@ html, body, .content {
   height: 100%;
   width: 100%;
   font-size: 16px;
-  background-color: black;
+  background-color: #000;
 }
 
 .flex-container {
@@ -25,43 +25,47 @@ html, body, .content {
   flex-direction: column;
 }
 
-.flex-full-row {
-  flex: 1 1 100%;
-}
-
-.content {
-  font: 1.5em Helvetica;
-  color: #fff;
-}
-.content a { text-decoration: none; color: inherit; }
+.flex-full-row { flex: 1 1 100%; }
 
 @media (orientation:portrait) {
   .flex-container { flex-direction: column; }
   .flex-item { flex: 1; }
 }
 
-.bg { transition: background-color 0.3s ease; }
-.bg:hover { background-color: #000; }
+.name { font-weight: bold; font-size: 2em; }
+.content { font: 1.5em Helvetica; color: #fff; }
+.content a { text-decoration: none; }
 
-.bg-twitter { background-color: #55acee; }
-.bg-tumblr { background-color: #35465c; }
-.bg-instagram { background-color: #517fa4; }
-.bg-vine { background-color: #00bf8f; }
-.bg-lastfm { background-color: #db1302; }
-.bg-soundcloud { background-color: #ff7000; }
-.bg-stack-overflow { background-color: #f90; }
-.bg-black { background-color: #000; }
+.bg {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #000;
+}
+.bg:hover { color: #fff; }
+
+.bg-twitter { color: #55acee; }
+.bg-tumblr { color: #4f5a6b; }
+.bg-instagram { color: #517fa4; }
+.bg-vine { color: #00bf8f; }
+.bg-lastfm { color: #db1302; }
+.bg-stack-overflow { color: #f90; }
+
+.bg-twitter:hover { background-color: #55acee; }
+.bg-tumblr:hover { background-color: #4f5a6b; }
+.bg-instagram:hover { background-color: #517fa4; }
+.bg-vine:hover { background-color: #00bf8f; }
+.bg-lastfm:hover { background-color: #db1302; }
+.bg-stack-overflow:hover { background-color: #f90; }
 </style>
 </head>
 
 <body>
 <div class="content flex-container">
+  <!-- good ol' flexbox hacks -->
   <div class="flex-full-row flex-item">
     <div class="flex-item"></div>
-    <div>Walfie</div>
+    <div class="name">Walfie</div>
     <div class="flex-item"></div>
   </div>
-  <!-- good ol' flexbox hacks -->
   <a class="flex-item bg bg-tumblr" target="_blank" href="http://walf-draw.tumblr.com/">
     <div class="flex-item"></div>
     <div class="social">
