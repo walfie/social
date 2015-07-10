@@ -37,8 +37,9 @@ html, body, .content {
 .content a { text-decoration: none; }
 
 .bg {
+  font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .bg:hover { color: #fff; }
 
@@ -55,13 +56,28 @@ html, body, .content {
 .bg-vine:hover { background-color: #00bf8f; }
 .bg-lastfm:hover { background-color: #db1302; }
 .bg-stack-overflow:hover { background-color: #f90; }
+
+.faded {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.bg-image {
+  background-image: url("img/background_small.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .bg-image { background-image: url("img/background_large.png"); }
+}
 </style>
 </head>
 
 <body>
-<div class="content flex-container">
+<div class="content bg-image flex-container">
   <!-- good ol' flexbox hacks -->
-  <div class="flex-full-row flex-item">
+  <div class="flex-full-row flex-item faded">
     <div class="flex-item"></div>
     <div class="name">Walfie</div>
     <div class="flex-item"></div>
@@ -114,7 +130,7 @@ html, body, .content {
     </div>
     <div class="flex-item"></div>
   </a>
-  <div class="flex-full-row flex-item"></div>
+  <div class="flex-full-row flex-item faded"></div>
 </div>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
