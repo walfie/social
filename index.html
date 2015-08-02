@@ -44,18 +44,23 @@ html, body, .content {
 .bg:hover { color: #fff; }
 
 .bg-twitter { color: #55acee; }
-.bg-tumblr { color: #4f5a6b; }
+.bg-tumblr { color: #2c4762; }
 .bg-instagram { color: #517fa4; }
 .bg-vine { color: #00bf8f; }
 .bg-lastfm { color: #db1302; }
-.bg-stack-overflow { color: #f90; }
+.bg-pixiv { color: #007ec4; }
 
 .bg-twitter:hover { background-color: #55acee; }
-.bg-tumblr:hover { background-color: #4f5a6b; }
+.bg-tumblr:hover { background-color: #2c4762; }
 .bg-instagram:hover { background-color: #517fa4; }
 .bg-vine:hover { background-color: #00bf8f; }
 .bg-lastfm:hover { background-color: #db1302; }
-.bg-stack-overflow:hover { background-color: #f90; }
+.bg-pixiv:hover { background-color: #007ec4; }
+
+.logo {
+  max-height: 16px;
+  padding-right: 5px;
+}
 
 .faded {
   background-color: rgba(0, 0, 0, 0.6);
@@ -85,7 +90,7 @@ html, body, .content {
   <a class="flex-item bg bg-tumblr" target="_blank" href="http://walf-draw.tumblr.com/">
     <div class="flex-item"></div>
     <div class="social">
-      <i class="fa fa-fw fa-tumblr"></i>
+      <img class="logo" src="img/tumblr.ico">
       <span>Tumblr</span>
     </div>
     <div class="flex-item"></div>
@@ -93,7 +98,7 @@ html, body, .content {
   <a class="flex-item bg bg-instagram" target="_blank" href="http://instagram.com/walfieee">
     <div class="flex-item"></div>
     <div class="social">
-      <i class="fa fa-fw fa-instagram"></i>
+      <img class="logo" src="img/instagram.ico">
       <span>Instagram</span>
     </div>
     <div class="flex-item"></div>
@@ -101,38 +106,37 @@ html, body, .content {
   <a class="flex-item bg bg-twitter" target="_blank" href="http://twitter.com/walfieee">
     <div class="flex-item"></div>
     <div class="social">
-      <i class="fa fa-fw fa-twitter"></i>
+      <img class="logo" src="img/twitter.ico">
       <span>Twitter</span>
+    </div>
+    <div class="flex-item"></div>
+  </a>
+  <a class="flex-item bg bg-pixiv" target="_blank" href="http://pixiv.me/walfie">
+    <div class="flex-item"></div>
+    <div class="social">
+      <img class="logo" src="img/pixiv.ico">
+      <span>pixiv</span>
     </div>
     <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-vine" target="_blank" href="http://vine.co/walfie">
     <div class="flex-item"></div>
     <div class="social">
-      <i class="fa fa-fw fa-vine"></i>
+      <img class="logo" src="img/vine.ico">
       <span>Vine</span>
-    </div>
-    <div class="flex-item"></div>
-  </a>
-  <a class="flex-item bg bg-stack-overflow" target="_blank" href="http://stackoverflow.com/users/1887090/walfie">
-    <div class="flex-item"></div>
-    <div class="social">
-      <i class="fa fa-fw fa-stack-overflow"></i>
-      <span>Stack Overflow</span>
     </div>
     <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-lastfm" target="_blank" href="http://last.fm/user/walfieee">
     <div class="flex-item"></div>
     <div class="social">
-      <i class="fa fa-fw fa-lastfm"></i>
+      <img class="logo" src="img/lastfm.ico">
       <span>Last.fm</span>
     </div>
     <div class="flex-item"></div>
   </a>
   <div class="flex-full-row flex-item faded"></div>
 </div>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- StatCounter -->
 <script>
