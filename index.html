@@ -10,7 +10,7 @@ html, body, .content {
   height: 100%;
   width: 100%;
   font-size: 16px;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .flex-container {
@@ -20,9 +20,9 @@ html, body, .content {
 
 .flex-item {
   flex: 1 1 33%;
-  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-full-row { flex: 1 1 100%; }
@@ -66,7 +66,6 @@ html, body, .content {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-
 .bg-image {
   background-image: url("img/background_small.png");
   background-size: cover;
@@ -81,59 +80,44 @@ html, body, .content {
 
 <body>
 <div class="content bg-image flex-container">
-  <!-- good ol' flexbox hacks -->
   <div class="flex-full-row flex-item faded">
-    <div class="flex-item"></div>
     <div class="name">Walfie</div>
-    <div class="flex-item"></div>
   </div>
   <a class="flex-item bg bg-tumblr" target="_blank" href="http://walf-draw.tumblr.com/">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/tumblr.ico">
       <span>Tumblr</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-instagram" target="_blank" href="http://instagram.com/walfieee">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/instagram.ico">
       <span>Instagram</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-twitter" target="_blank" href="http://twitter.com/walfieee">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/twitter.ico">
       <span>Twitter</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-pixiv" target="_blank" href="http://pixiv.me/walfie">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/pixiv.ico">
       <span>pixiv</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-vine" target="_blank" href="http://vine.co/walfie">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/vine.ico">
       <span>Vine</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <a class="flex-item bg bg-lastfm" target="_blank" href="http://last.fm/user/walfieee">
-    <div class="flex-item"></div>
-    <div class="social">
+    <div>
       <img class="logo" src="img/lastfm.ico">
       <span>Last.fm</span>
     </div>
-    <div class="flex-item"></div>
   </a>
   <div class="flex-full-row flex-item faded"></div>
 </div>
